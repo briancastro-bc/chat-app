@@ -1,4 +1,25 @@
+<!--
+<app-navbar-desktop
+  [name]="lola"
+  [title]="title"
+  [counter]="counter"
+  (counterOutput)="counterValue($event)"
+>
+  <div left>
+    <h2>left</h2> </div>
+  <div center>
+    <h2>center</h2>
+  </div>
+  <div right>
+    <h2>right</h2>
+  </div>
+</app-navbar-desktop> -->
 
-<app-navbar-desktop></app-navbar-desktop>
+<button type="button" (click)="sum()">Hola y suma</button>
+<!-- <button type="button" (click)="odd()">Restar</button> -->
+
+<!-- <app-no-encapsulation></app-no-encapsulation> -->
+<!-- <app-emulated-encapsulation></app-emulated-encapsulation> -->
+<!-- <app-shadowroot-encapsulation></app-shadowroot-encapsulation> -->
 
 <router-outlet></router-outlet>

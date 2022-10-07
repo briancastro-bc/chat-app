@@ -1,14 +1,26 @@
-<nav #navbar>
+<nav class="navbar" #navbar>
+  <div class="navbar__container">
+    <div class="navbar__container--side left">
+      <ng-content select="[left]"></ng-content>
+    </div>
+    <div class="navbar__container--side center">
+      {{ title }} : {{ navbarName }}
+    </div>
+    <div class="navbar__container--side right">
+      <ng-content select="[right]"></ng-content>
+    </div>
+  </div>
+</nav>
+
+<button type="button" (click)="changeColor()">Change color</button>
+
+<button type="button" (click)="emitCounterValue()">Emitir valor del contador</button>
+
+<div>
+  <h1>Counter value: {{ counter }}</h1>
   <ul>
-    <li>
-      Home
-    </li>
-    <li>
-      About
-    </li>
-    <li>
-      Help
+    <li *ngFor="let change of counterLogList">
+      {{ change }}
     </li>
   </ul>
-</nav>
-<button type="button" (click)="changeColor()">Change color</button>
+</div>

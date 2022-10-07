@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { NavbarDesktopComponent } from './components/navbar/desktop/navbar.desktop.component';
+import { NavbarDesktopComponent } from '@shared/components/navbar/desktop/navbar.desktop.component';
 
 @NgModule({
   declarations: [
