@@ -1,3 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
 @use "~/src/assets/sass/normalize";
 @use "~/src/assets/sass/variables";
+
+:root {
+
+  // variables.$nombre-variable
+
+  --light-color: #{variables.$light-color};
+  --light-alt-color: #{variables.$light-alt-color};
+  --dark-color: #{variables.$dark-color};
+  --dark-alt-color: #{variables.$dark-alt-color};
+
+  /* FROST */
+  --primary-color: #{variables.$primary-color};
+  --primary-alt-color: #{variables.$primary-alt-color};
+  --secondary-color: #{variables.$secondary-color};
+  --secondary-alt-color: #{variables.$secondary-alt-color};
+
+  /* Nord dark */
+  --primary-dark-color: #{variables.$primary-dark-color};
+  --primary-dark-alt-color: #{variables.$primary-dark-alt-color};
+  --secondary-dark-color: #{variables.$secondary-dark-color};
+  --secondary-dark-alt-color: #{variables.$secondary-dark-alt-color};
+
+  /* Nord light */
+  --primary-light-color: #{variables.$primary-light-color};
+  --primary-light-alt-color: #{variables.$primary-light-alt-color};
+  --secondary-light-color: #{variables.$secondary-light-color};
+}
+
+body {
+  background-color: var(--background-theme);
+  color: var(--color-theme);
+}
+
+body.light-theme {
+  --background-theme: var(--primary-light-color);
+  --background-alt-theme: var(--primary-light-alt-color);
+  --border-theme: #00000010;
+  --border-alt-theme: 0px 2.5px 30px #000000bf;
+  --color-theme: var(--dark-color);
+  --color-alt-theme: var(--dark-alt-color);
+}
+
+body.dark-theme {
+  --background-theme: var(--primary-dark-color);
+  --background-alt-theme: var(--primary-dark-alt-color);
+  --border-theme: #ffffffbc;
+  --border-alt-theme: 0px 2.5px 30px #ffffffbf;
+  --color-theme: var(--light-color);
+  --color-alt-theme: var(--light-alt-color);
+}

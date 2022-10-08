@@ -1,18 +1,18 @@
 <nav class="navbar" #navbar>
   <div class="navbar__container">
     <div class="navbar__container--side left">
-      <ng-content select="[left]"></ng-content>
+      left
     </div>
     <div class="navbar__container--side center">
-      {{ title }} : {{ navbarName }}
+      {{ theme$ | async }}
     </div>
     <div class="navbar__container--side right">
-      <ng-content select="[right]"></ng-content>
+      <button type="button" (click)="changeTheme()">Cambiar tema</button>
     </div>
   </div>
 </nav>
 
-<button type="button" (click)="changeColor()">Change color</button>
+<!-- <button type="button" (click)="changeColor()">Change color</button>
 
 <button type="button" (click)="emitCounterValue()">Emitir valor del contador</button>
 
@@ -23,4 +23,4 @@
       {{ change }}
     </li>
   </ul>
-</div>
+</div> -->

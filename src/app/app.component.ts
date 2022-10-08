@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ThemeService } from '@shared/services/theme.service';
 
@@ -7,10 +7,7 @@ import { ThemeService } from '@shared/services/theme.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'chat-app';
-
-  lola: string = "lola";
+export class AppComponent implements OnInit {
 
   counter: number = 0;
 
@@ -18,9 +15,12 @@ export class AppComponent {
     private themeService: ThemeService,
   ) {}
 
+  ngOnInit(): void {
+    this.themeService.initialize();
+  }
+
   sum(): void {
     this.counter++;
-    this.themeService.hello('Lola');
   }
 
   odd(): void {
